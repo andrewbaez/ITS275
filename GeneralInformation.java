@@ -5,16 +5,16 @@ package finalProject;
 import java.util.*;
 
 public class GeneralInformation {
-
+	//Declare constants (English Units to Metric Units)
+	static double METERPERINCH = 0.0254;
+	static double POUNDPERKILO = 0.453592;
+	
 	public static void main(String[] args) {
-		//Declare constants (English Units to Metric Units)
-		final double METERPERINCH = 0.0254;
-		final double POUNDPERKILO = 0.453592;
 		//Date (constructor and object)
 		Date today = new Date();
 		//Initialize the variable & Use the "for" loop to welcome the user once
 		for (int welcome = 0; welcome < 1; welcome++) {
-			System.out.println("Welcome to the Hospital! ");
+			System.out.println("Welcome!");
 		}
 		//Day of the week, the date, and the current time
 		System.out.println("Today is " + today + "\n");	
@@ -30,6 +30,7 @@ public class GeneralInformation {
 		System.out.println("What is your height in inches?");
 		//Exception
 		System.out.print("(Answer cannont equal zero)");
+		System.out.println();
 		//Question 3 (continued)
 		int height = input.nextInt();
 		double heightMeters = height * METERPERINCH;
@@ -42,6 +43,7 @@ public class GeneralInformation {
 		System.out.println("What is your weight in pounds?");
 		//Exception
 		System.out.print("(Answer cannont equal zero)");
+		System.out.println();
 		//Question 4 (continued)
 		int weight = input.nextInt();
 		double weightKilo = weight * POUNDPERKILO;
@@ -82,7 +84,7 @@ public class GeneralInformation {
 			}
 		else
 			System.out.println("You are obese.");
-		//Pass int bloodResult to Blood.Confirm Method
+		//Pass int bloodResult to BloodType.Confirm Method
 		BloodType.Confirm(bloodResult);
 		//Switch
 		switch(bloodResult) {
@@ -115,9 +117,35 @@ public class GeneralInformation {
 		//Exit Switch
 		System.exit(0);
 		}
-		//Close scanner inputs
+		System.out.println();
+		System.out.println();
+		System.out.println("Thank you " + firstName + " for all that information! Now we will test your general intelligence!");
+		//Implementing Abstract Classes
+		TestSub test = new TestSub();
+		test.fingersAndToes();
+		String genAnswer1 = input.next();
+		System.out.println("You answered " + genAnswer1);
+		if (genAnswer1 == "YES") {
+			System.out.println("Good answer!");
+		}
+		else if (genAnswer1 == "NO") {
+			System.out.println("Sorry that is inncorrect!");
+		}
+		//Implements Abstract Interfaces
+		System.out.println();
+		System.out.println("Next Question: ");
+		Test2Sub test1 = new Test2Sub();
+		test1.Quarentine();
+		String genAnswer2 = input.next();
+		System.out.println("You answered " + genAnswer2);
+		if (genAnswer2 == "TRUE") {
+			System.out.println("Yeah, I don't blame you!");
+		}
+		else {
+			System.out.println("You are very lucky!");
+		}
+		//Close Scanner and End of Code
 		input.close();
-		//End Program
 		System.out.println("Thank you for using this program. Goodbye.");
 	}
 }
