@@ -2,6 +2,7 @@ package finalProject;
 
 public class TestSub extends Test {
 //This is a subclass of Test
+//Override (Method Overriding)
 	@Override
 	public void fingersAndToes() {
 		System.out.println("Would you agree with this statement:");
