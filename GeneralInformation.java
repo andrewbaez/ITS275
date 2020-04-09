@@ -122,7 +122,7 @@ public class GeneralInformation {
 		System.out.println("Thank you " + firstName + " for all that information! Now we will test your general knowledge including basic math, basic anatomy, etc.!");
 		System.out.println("Hope you're ready!");
 		System.out.println();
-		//Implementing Abstract Classes
+		//Implementing Abstract Classes & Overriding
 			String genCorrect1 = "YES";
 			TestSub test = new TestSub();
 			test.fingersAndToes();

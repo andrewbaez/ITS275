@@ -1,4 +1,5 @@
 package finalProject;
+//The basic template was imported from https://github.com/DrGMC/DrGMC-Recursion/blob/master/Factorial
 
 public class Factorial {
 	static int factorial(int number) {
